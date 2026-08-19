@@ -2,8 +2,7 @@
 
 A random Yu-Gi-Oh pixel-art image, rendered in full 256-color ANSI, greets you every time you open a new terminal — right next to a live snapshot of your system stats (neofetch-style).
 
-![screenshot placeholder](docs/screenshot.png)
-<!-- Replace the line above with an actual screenshot or terminal recording (asciinema/vhs) once you have one. -->
+![yugioh-for-terminal in action](docs/screenshot.png)
 
 ## Requirements
 

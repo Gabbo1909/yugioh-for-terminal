@@ -31,17 +31,7 @@ def _debug(msg):
 
 
 def get_terminal_width():
-    """Return the current terminal width.
-
-    NOTE: an earlier version of this function also cross-checked the $COLUMNS
-    environment variable, on the theory that some IDE-embedded terminals (e.g.
-    VS Code's integrated terminal) might report a stale/fallback ioctl size at
-    shell-startup. That didn't actually help: $COLUMNS is a bash *shell*
-    variable, not something exported to child processes' environment by
-    default, so os.environ.get("COLUMNS") is normally just None here — the
-    check had no real effect. Reverted back to a plain, direct query pending a
-    proper fix for the underlying narrow-terminal color-bleed issue.
-    """
+    # Return the current terminal width.
     try:
         return shutil.get_terminal_size((80, 20)).columns
     except Exception as e:
