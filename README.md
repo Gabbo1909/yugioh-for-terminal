@@ -135,7 +135,7 @@ __pycache__/
 
 Drop a plain-text file into `ascii/`. Two things to know about the format:
 
-- Files use full 256-color ANSI escape codes (`\x1b[38;5;N;48;5;Mm`) applied to half-block characters (`▄`) — the kind of output tools like [chafa](https://hpjansson.org/chafa/) or online ANSI-art converters produce.
+- Files use full 256-color ANSI escape codes (`\x1b[38;5;N;48;5;Mm`) applied to half-block characters (`▄`) — the kind of output online ANSI-art converters produce.
 - Because raw ESC (`0x1b`) bytes are invisible and easily get stripped by editors, browsers, or copy-paste, files can alternatively store the placeholder character `␛` in place of the real ESC byte — `read_ascii_file()` converts it back automatically at runtime. This keeps the files diffable and safe to view/edit without breaking them.
 - If you generate art from an online converter, prefer a **"Download .ans/.txt"** button over copy-pasting from the page — copy-paste is the most common way the ESC byte gets silently dropped.
 
